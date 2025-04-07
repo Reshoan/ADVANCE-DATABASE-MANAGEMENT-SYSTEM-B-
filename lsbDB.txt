@@ -1,0 +1,59 @@
+DECLARE
+  num1 number(5) := 5;
+  num2 number(5) := 5;
+BEGIN
+ dbms_output.put_line('The numbers are ' || num1 || ' ' || num2);
+
+  DECLARE
+    sumNum number(5):=0;
+  BEGIN
+    sumNum:= num1 + num2;
+    dbms_output.put_line('The sum is: ' || sumNum);
+  END;
+END;
+
+DECLARE
+   num1 number(5):=5;
+   num2 number(5):=5;
+   num3 number(5):=5;
+   mul number(5);
+BEGIN
+   mul := num1*num2*num3;
+   dbms_output.put_line(mul);
+END;
+
+DECLARE
+   message varchar2(20):='Hello World';
+BEGIN
+   dbms_output.put_line(UPPER(message));
+END;
+
+DECLARE
+   smallNum number(5) := 5;
+   largeNum number(5) := 8;
+   sub number(5);
+BEGIN
+   sub := largeNum - smallNum;
+   dbms_output.put_line(sub);
+END;
+
+
+DECLARE
+   num1 number(5) := 12;
+   num2 number(5) := 14;
+   num3 number(5) := 16;
+   num4 number(5) := 18;
+   totalnum number(5);
+   avgnum number(5);
+BEGIN
+   totalnum:= num1+num2+num3+num4;
+   avgnum:= totalnum/4;
+   dbms_output.put_line(avgnum);
+END;
+
+DECLARE
+   pi CONSTANT number(5,2) := 3.14;
+BEGIN
+   dbms_output.put_line(pi);
+END;
+
